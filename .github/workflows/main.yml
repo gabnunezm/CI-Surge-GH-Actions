@@ -16,10 +16,10 @@ jobs:
       - name: configura nodejs  
         uses: actions/setup-node@v3
         with:
-            node-version: '23' 
+            node-version: '18' 
 
       - name: Instala Surge       
         run: npm install --global surge
 
       - name: Publicar pagina
-        run: surge --project ./ --domain ${{ secrets.better-tongue.surge.sh }} --token ${{ secrets.821d988e5b0ccd63eff18251f1213bc8 }}
+        run: surge --project ./ --domain ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_API_KEY }}
